@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto auto;
+            gap: 10px;
+            width: 90%;
+        }
+
+        .box {
+            background-color: rgb(255, 0, 200);
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            border-radius: 8px;
+        }
+
+        .one {
+            grid-column: span 2;
+        }
+
+        .two {
+            grid-column: 1; /* Box 2 lebih kecil */
+        }
+
+        .three {
+            grid-column: 2; /* Box 3 lebih besar */
+        }
+
+        .four {
+            grid-column: 2; /* lebih besar dan sejajar dengan Box 3 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="box one">One</div>
+        <div class="box two">Two</div>
+        <div class="box three">Three</div>
+        <div class="box four">Four</div>
+    </div>
+</body>
+
+</html>
